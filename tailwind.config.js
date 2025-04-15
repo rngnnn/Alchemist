@@ -1,19 +1,18 @@
 const colors = require('tailwindcss/colors')
 module.exports = {
-  mode: 'jit',
-  purge: ['./pages/**/*.{js,ts,jsx,tsx}', './components/**/*.{js,ts,jsx,tsx}'],
+  content: ['./pages/**/*.{js,ts,jsx,tsx}', './components/**/*.{js,ts,jsx,tsx}'], // Eski 'purge' yerine 'content' kullanılıyor
   theme: {
     fontFamily: {
       Poppins: ["Poppins", "sans-serif"]
     },
     extend: {
       colors: {
-        ...colors
+        neutral: require('tailwindcss/colors').neutral,
+        gray: require('tailwindcss/colors').gray,
+        slate: require('tailwindcss/colors').slate,
+        stone: require('tailwindcss/colors').stone,
       }
     },
-  },
-  variants: {
-    extend: {},
   },
   plugins: [],
 }

@@ -16,12 +16,12 @@ export default function Home() {
               <div className="flex flex-col lg:justify-start justify-center items-center lg:items-start mt-5 lg:mt-0 w-full">
                 <div className="flex items-center">
                 <p className="flex items-center text-white text-4xl font-semibold">
-                  Umut Bayraktar (umutxyp)
+                  Rengin Forbes (rngn)
                 </p>
             
                 </div>
                 <p className="text-white/50 text-md mt-3">
-        <p>Hi! I'm <strong>Umut</strong>, a 19-year-old software developer and content creator based in London, UK. Originally from Antalya, Turkey, I specialize in technology, software, and cryptocurrency.</p>
+        <p>Hi! I'm <strong>Rengin</strong> I specialize in technology, software, and cryptocurrency.</p>
         <br></br>
         <h1><strong>EXPERIENCE</strong></h1>
         <ul>
@@ -32,10 +32,10 @@ export default function Home() {
         <br></br>
         <h1><strong>SOCIAL MEDIA AND COMMUNITY LINKS</strong></h1>
         <ul>
-            <li><a href="https://facebook.com/umutxyp" target="_blank">* umutxyp - Facebook</a></li>
-            <li><a href="https://instagram.com/umutxyp" target="_blank">* umutxyp - Instagram</a></li>
-            <li><a href="https://t.me/umutland" target="_blank">* umutxyp - Telegram</a></li>
-            <li><a href="https://youtube.com/umutxyp" target="_blank">* umutxyp - YouTube</a></li>
+            <li><a href="" target="_blank">*  </a></li>
+            <li><a href="" target="_blank">*  </a></li>
+            <li><a href="" target="_blank">* </a></li>
+            <li><a href="" target="_blank">* </a></li>
         </ul>
 <br></br>
         <h1><strong>PROJECTS</strong></h1>
@@ -49,7 +49,7 @@ export default function Home() {
                 </p>
               </div>
               <div className={`order-first lg:order-last flex-shrink-0 relative w-[160px] h-[160px] rounded-full pulse-avatar-online `}>
-                <img alt="umutxyp" src={`https://ugc.production.linktr.ee/6RJk9s2pQZ2yAdcxw3Ir_TXX2dLlNmwM2OFdf?io=true&size=avatar-v3_0`} width="160" height="160" className={`bg-neutral-700 w-[160px] h-[160px] rounded-full`} />
+                <img alt="" src={`https://ugc.production.linktr.ee/6RJk9s2pQZ2yAdcxw3Ir_TXX2dLlNmwM2OFdf?io=true&size=avatar-v3_0`} width="160" height="160" className={`bg-neutral-700 w-[160px] h-[160px] rounded-full`} />
               </div>
               
             </div>
