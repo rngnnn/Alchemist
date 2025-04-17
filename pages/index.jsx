@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import Head from 'next/head';
 import Image from 'next/image';
+import Link from 'next/link'; // Link bileşeni eklendi
 
 export default function Home() {
   const [scale, setScale] = useState(1);
@@ -15,7 +16,7 @@ export default function Home() {
 
 
       // Sağdaki yazının kaydırılması
-      if (scrollY > 200) {
+      if (scrollY > 50 && scrollY < 700) {
         setShowText(true);
       } else {
         setShowText(false);
@@ -29,11 +30,7 @@ export default function Home() {
   return (
     <>
 
-{showText && (
-        <div className="fixed top-1/2 right-[200px] animate-slide-in text-white text-lg font-semibold">
-          This is a scrolling text from right to left.
-        </div>
-      )}
+
       {/* Siyah Yazı (Sağ Tarafta, Yukarıdan Aşağı) */}
         {/* Siyah Yazı (Sol Tarafta, Yukarıdan Aşağı Harf Harf) */}
         <div className="absolute top-12 left-5 h-full flex flex-col justify-center items-center space-y-2 pl-4">
@@ -62,6 +59,9 @@ export default function Home() {
         <p className="text-white text-lg">x</p>
         <p className="text-white text-lg">t</p>
         <p className="text-white text-lg">.</p>
+
+
+
       </div>
       <div className="absolute top-0 right-0 h-full flex flex-col justify-center items-center space-y-5 pr-4">
       
@@ -70,12 +70,16 @@ export default function Home() {
         </p>
 
       
-
+ 
       </div>
       
 
     
-
+ {showText && (
+        <div className="fixed top-1/1 right-[200px] animate-slide-in text-white text-lg font-semibold">
+          This is a scrolling text from right to left.
+        </div>
+      )}
 
       {/* Kırmızı Alan */}
       <div className="bg-red-900 min-h-screen flex items-center justify-center">
@@ -96,6 +100,55 @@ export default function Home() {
         </div>
       </div>
 
+{/* Projects Bölümü */}
+<div className="bg-gray-100 min-h-screen flex flex-col items-center justify-center">
+  <h1 className="text-4xl font-bold text-gray-800 mb-6">Projects</h1>
+  <div className="mt-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6">
+    {/* Proje Kartları */}
+    <Link href="/project1">
+      <a className="bg-white shadow-md rounded-lg p-6 hover:shadow-lg transition">
+        <img
+          src="/assets/project1.jpg"
+          alt="Project 1"
+          className="w-full h-48 object-cover rounded-md"
+        />
+        <h2 className="text-xl font-semibold text-gray-800 mt-4">Project 1</h2>
+      </a>
+    </Link>
+    <Link href="/project2">
+      <a className="bg-white shadow-md rounded-lg p-6 hover:shadow-lg transition">
+        <img
+          src="/assets/project2.jpg"
+          alt="Project 2"
+          className="w-full h-48 object-cover rounded-md"
+        />
+        <h2 className="text-xl font-semibold text-gray-800 mt-4">Project 2</h2>
+      </a>
+    </Link>
+    <Link href="/project3">
+      <a className="bg-white shadow-md rounded-lg p-6 hover:shadow-lg transition">
+        <img
+          src="/assets/project3.jpg"
+          alt="Project 3"
+          className="w-full h-48 object-cover rounded-md"
+        />
+        <h2 className="text-xl font-semibold text-gray-800 mt-4">Project 3</h2>
+      </a>
+    </Link>
+    <Link href="/project4">
+      <a className="bg-white shadow-md rounded-lg p-6 hover:shadow-lg transition">
+        <img
+          src="/assets/project4.jpg"
+          alt="Project 4"
+          className="w-full h-48 object-cover rounded-md"
+        />
+        <h2 className="text-xl font-semibold text-gray-800 mt-4">Project 4</h2>
+      </a>
+    </Link>
+  </div>
+</div>
+
+
       <style jsx>{`
         @keyframes slide-in {
           0% {
@@ -109,6 +162,13 @@ export default function Home() {
           animation: slide-in 1s ease-out forwards;
         }
       `}</style>
+
+
+
+
+
+
+
 
 
 
