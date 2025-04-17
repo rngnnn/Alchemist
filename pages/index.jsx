@@ -18,6 +18,24 @@ export default function Home() {
 
   return (
     <>
+      {/* Siyah Yazı (Sağ Tarafta, Yukarıdan Aşağı) */}
+      <div className="absolute top-0 right-0 h-full flex flex-col justify-center items-center space-y-4 pr-4">
+        <p className="text-white text-lg rotate-90">
+          This is a black text outside the red area.
+        </p>
+        <p className="text-white text-lg rotate-90">
+          Another line of text.
+        </p>
+
+        <div className='absolute top-0 -0 h-full flex flex-col justify-center items-center space-y-4 pr-4'>
+        <p className="text-white text-lg rotate-90">
+          Yet another line of text.
+        </p>
+        </div>
+        
+      </div>
+
+      {/* Kırmızı Alan */}
       <div className="bg-red-900 min-h-screen flex items-center justify-center">
         <div className="text-center">
           {/* Manifesto Başlığı */}
