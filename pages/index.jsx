@@ -4,12 +4,22 @@ import Image from 'next/image';
 
 export default function Home() {
   const [scale, setScale] = useState(1);
+  const [showText, setShowText] = useState(false); // showText state'i tanımlandı
+
 
   useEffect(() => {
     const handleScroll = () => {
       const scrollY = window.scrollY;
       const newScale = 1 + scrollY / 1000; // Kaydırmaya bağlı olarak ölçek artırılır
       setScale(newScale);
+
+
+      // Sağdaki yazının kaydırılması
+      if (scrollY > 200) {
+        setShowText(true);
+      } else {
+        setShowText(false);
+      }
     };
 
     window.addEventListener('scroll', handleScroll);
@@ -18,22 +28,54 @@ export default function Home() {
 
   return (
     <>
+
+{showText && (
+        <div className="fixed top-1/2 right-[200px] animate-slide-in text-white text-lg font-semibold">
+          This is a scrolling text from right to left.
+        </div>
+      )}
       {/* Siyah Yazı (Sağ Tarafta, Yukarıdan Aşağı) */}
-      <div className="absolute top-0 right-0 h-full flex flex-col justify-center items-center space-y-4 pr-4">
-        <p className="text-white text-lg rotate-90">
-          This is a black text outside the red area.
-        </p>
+        {/* Siyah Yazı (Sol Tarafta, Yukarıdan Aşağı Harf Harf) */}
+        <div className="absolute top-12 left-5 h-full flex flex-col justify-center items-center space-y-2 pl-4">
+        <p className="text-white text-lg">Y</p>
+        <p className="text-white text-lg">e</p>
+        <p className="text-white text-lg">t</p>
+        <p className="text-white text-lg"> </p>
+        <p className="text-white text-lg">a</p>
+        <p className="text-white text-lg">n</p>
+        <p className="text-white text-lg">o</p>
+        <p className="text-white text-lg">t</p>
+        <p className="text-white text-lg">h</p>
+        <p className="text-white text-lg">e</p>
+        <p className="text-white text-lg">r</p>
+        <p className="text-white text-lg"> </p>
+        <p className="text-white text-lg">l</p>
+        <p className="text-white text-lg">i</p>
+        <p className="text-white text-lg">n</p>
+        <p className="text-white text-lg">e</p>
+        <p className="text-white text-lg"> </p>
+        <p className="text-white text-lg">o</p>
+        <p className="text-white text-lg">f</p>
+        <p className="text-white text-lg"> </p>
+        <p className="text-white text-lg">t</p>
+        <p className="text-white text-lg">e</p>
+        <p className="text-white text-lg">x</p>
+        <p className="text-white text-lg">t</p>
+        <p className="text-white text-lg">.</p>
+      </div>
+      <div className="absolute top-0 right-0 h-full flex flex-col justify-center items-center space-y-5 pr-4">
+      
         <p className="text-white text-lg rotate-90">
           Another line of text.
         </p>
 
-        <div className='absolute top-0 -0 h-full flex flex-col justify-center items-center space-y-4 pr-4'>
-        <p className="text-white text-lg rotate-90">
-          Yet another line of text.
-        </p>
-        </div>
-        
+      
+
       </div>
+      
+
+    
+
 
       {/* Kırmızı Alan */}
       <div className="bg-red-900 min-h-screen flex items-center justify-center">
@@ -53,6 +95,25 @@ export default function Home() {
           </div>
         </div>
       </div>
+
+      <style jsx>{`
+        @keyframes slide-in {
+          0% {
+            transform: translateX(300px);
+          }
+          100% {
+            transform: translateX(0);
+          }
+        }
+        .animate-slide-in {
+          animation: slide-in 1s ease-out forwards;
+        }
+      `}</style>
+
+
+
+
+
     </>
   );
 }
