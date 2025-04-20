@@ -108,7 +108,7 @@ export default function Home() {
     <Link href="/project1">
       <a className="bg-white shadow-md rounded-lg p-6 hover:shadow-lg transition">
         <img
-          src="/assets/project1.jpg"
+          src="/assets/techs/eye.jpg"
           alt="Project 1"
           className="w-full h-48 object-cover rounded-md"
         />
@@ -118,7 +118,7 @@ export default function Home() {
     <Link href="/project2">
       <a className="bg-white shadow-md rounded-lg p-6 hover:shadow-lg transition">
         <img
-          src="/assets/project2.jpg"
+          src="/assets/techs/lolipop.jpg"
           alt="Project 2"
           className="w-full h-48 object-cover rounded-md"
         />
