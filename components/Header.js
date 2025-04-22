@@ -11,12 +11,7 @@ const itemsRight = [
 
 const navItems = [
     { icon: 'fal fa-home', active: 'fa fa-home', label: 'Home', href: '/' },
-    {
-        icon: 'fal fa-compass',
-        active: 'fa fa-compass',
-        label: 'Projects',
-        href: '#projects',
-    },
+    { icon: 'fal fa-compass', active: 'fa fa-compass', label: 'Projects', href: '/projects' },
     { icon: 'fal fa-phone', active: 'fa fa-phone', label: 'Contact', href: '/contact' },
     { icon: 'fal fa-rss', active: 'fa fa-rss', label: 'Blogs', href: 'https://blog.codeshare.me' },
 ];
@@ -25,16 +20,10 @@ const Header = () => {
     const [menuOpen, setMenuOpen] = useState(false); // Menü durumu
     const router = useRouter();
 
-    const handleScroll = (id) => {
-        const element = document.getElementById(id);
-        if (element) {
-            element.scrollIntoView({ behavior: 'smooth' });
-        }
-    };
-
     return (
         <>
             <div className="border-b-1 border-neutral-800/20 pb-2">
+                {/* Üst Kısım */}
                 <div className="flex flex-col md:flex-row w-full items-center md:justify-between">
                     <p className="font-semibold font-Poppins text-xl"></p>
                     <div className="flex items-end space-x-2">
@@ -51,6 +40,7 @@ const Header = () => {
                         ))}
                     </div>
                 </div>
+
                 {/* Hamburger Menü */}
                 <div className="flex justify-between items-center py-2">
                     <button
@@ -66,38 +56,22 @@ const Header = () => {
                     >
                         {navItems.map((item) => (
                             <div key={item.label} className="relative group">
-                                {item.href.startsWith('#') ? (
-                                    <button
-                                        onClick={() => handleScroll(item.href.substring(1))}
+                                <Link href={item.href}>
+                                    <a
                                         className={`flex items-center justify-center text-white/50 cursor-pointer hover:text-white/100 rounded-xl transition-all duration-150 ${
                                             router.asPath === item.href && 'text-white/100'
                                         }`}
                                     >
                                         <i
                                             className={`${
-                                                router.asPath === item.href ? item.active : item.icon
+                                                router.asPath === item.href
+                                                    ? item.active
+                                                    : item.icon
                                             } mr-2`}
                                         />
                                         {item.label}
-                                    </button>
-                                ) : (
-                                    <Link href={item.href}>
-                                        <a
-                                            className={`flex items-center justify-center text-white/50 cursor-pointer hover:text-white/100 rounded-xl transition-all duration-150 ${
-                                                router.asPath === item.href && 'text-white/100'
-                                            }`}
-                                        >
-                                            <i
-                                                className={`${
-                                                    router.asPath === item.href
-                                                        ? item.active
-                                                        : item.icon
-                                                } mr-2`}
-                                            />
-                                            {item.label}
-                                        </a>
-                                    </Link>
-                                )}
+                                    </a>
+                                </Link>
                             </div>
                         ))}
                     </div>

@@ -29,31 +29,15 @@ export default function Home() {
     <>
       {/* Siyah Yazı (Sol Tarafta, Yukarıdan Aşağı Harf Harf) */}
       <div className="font absolute top-19 left-10 h-full flex flex-col justify-center items-center space-y-1 pl-9">
-        <p className="text-white text-3xl">Y</p>
-        <p className="text-white text-4xl">e</p>
-        <p className="text-white text-4xl">t</p>
-        <p className="text-white text-4xl"> </p><hr /><hr />
-        <p className="text-white text-4xl">a</p>
-        <p className="text-white text-4xl">n</p>
-        <p className="text-white text-4xl">o</p>
-        <p className="text-white text-4xl">t</p>
-        <p className="text-white text-4xl">h</p>
-        <p className="text-white text-4xl">e</p>
-        <p className="text-white text-4xl">r</p>
-        <p className="text-white text-4xl"> </p><hr /><hr />
-        <p className="text-white text-4xl">l</p>
-        <p className="text-white text-4xl">i</p>
-        <p className="text-white text-4xl">n</p>
-        <p className="text-white text-4xl">e</p>
-        <p className="text-white text-4xl"> </p><hr /><hr />
-        <p className="text-white text-4xl">o</p>
-        <p className="text-white text-4xl">f</p>
-        <p className="text-white text-4xl"> </p>
-        <p className="text-white text-4xl">t</p>
-        <p className="text-white text-4xl">e</p>
-        <p className="text-white text-4xl">x</p>
-        <p className="text-white text-4xl">t</p>
-        <p className="text-white text-4xl">.</p>
+        <p className="text-white text-4xl">A</p>
+        <p className="text-white text-4xl">L</p>
+        <p className="text-white text-4xl">C</p>
+        <p className="text-white text-4xl">H</p>
+        <p className="text-white text-4xl">E</p>
+        <p className="text-white text-4xl">M</p>
+        <p className="text-white text-4xl">I</p>
+        <p className="text-white text-4xl">S</p>
+        <p className="text-white text-4xl">T</p>
       </div>
 
       {/* Siyah Yazı (Sağ Tarafta, Yukarıdan Aşağı) */}
@@ -63,20 +47,20 @@ export default function Home() {
 
       {showText && (
         <div
-          className="fixed top-1/3 right-[300px] animate-slide-in text-black text-lg font-semibold"
+          className="fixed top-1/4 right-[400px] animate-slide-in text-blue text-lg font-semibold mask mask-contain bg-gradient-to-r from-black to-red-900 p-1 pl-2 "
           style={{
+             borderRadius: '20px',
             zIndex: 10, // Yazıyı diğer öğelerin üzerine çıkarır
             pointerEvents: 'none', // Yazının tıklanabilir olmamasını sağlar
           }}
         >
-          This is a scrolling text from right to left.
-        </div>
+ Be wells none see. Unstoppered tears,        </div>
       )}
 
       {/* Kırmızı Alan */}
       <div className="bg-red-900 min-h-screen flex items-center justify-center relative">
         {/* Manifesto Başlığı */}
-        <p className="absolute top-10 text-blue-900 text-4xl font-semibold">
+        <p className="absolute top-10 text-white-900 text-4xl font-semibold">
           MANIFESTO
         </p>
         {/* Manifesto GIF */}
@@ -98,56 +82,48 @@ export default function Home() {
       </div>
 
       {/* Projects Bölümü */}
-      <div id="projects" className="bg-gray-100 min-h-screen flex flex-col items-center justify-center">
-        <h1 className="text-4xl font-bold text-gray-800 mb-6">Projects</h1>
-        <div className="mt-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6">
+      <div id="projects" className="bg-red-900 min-h-screen flex flex-col items-center justify-center">
+        <h1 className="text-4xl font-bold text-white mb-6">- PROJECTS -</h1>
+        <div className="mt-8 grid grid-cols-1 md:grid-cols-2 lg:gri-cols-2 gap-12">
           {/* Proje Kartları */}
           <Link href="/project1">
-            <a className="bg-white shadow-md rounded-lg p-6 hover:shadow-lg transition">
+            <a className="bg-white shadow-md rounded-3xl p-6 hover:shadow-2xl hover:scale-110 transition-transform duration-300">
               <img
                 src="/assets/techs/eye.jpg"
                 alt="Project 1"
                 className="w-full h-48 object-cover rounded-md"
               />
-              <h2 className="text-xl font-semibold text-gray-800 mt-4">
-                Project 1
-              </h2>
+              <h2 className="text-xl font-semibold text-gray-800 mt-4">Project 1</h2>
             </a>
           </Link>
           <Link href="/project2">
-            <a className="bg-white shadow-md rounded-lg p-6 hover:shadow-lg transition">
+            <a className="bg-white shadow-md rounded-3xl p-6 hover:shadow-2xl hover:scale-110 transition-transform duration-300">
               <img
                 src="/assets/techs/lolipop.jpg"
                 alt="Project 2"
                 className="w-full h-48 object-cover rounded-md"
               />
-              <h2 className="text-xl font-semibold text-gray-800 mt-4">
-                Project 2
-              </h2>
+              <h2 className="text-xl font-semibold text-gray-800 mt-4">Project 2</h2>
             </a>
           </Link>
           <Link href="/project3">
-            <a className="bg-white shadow-md rounded-lg p-6 hover:shadow-lg transition">
+            <a className="bg-white shadow-md rounded-3xl p-6 hover:shadow-2xl hover:scale-110 transition-transform duration-300">
               <img
                 src="/assets/techs/bike.jpg"
                 alt="Project 3"
                 className="w-full h-48 object-cover rounded-md"
               />
-              <h2 className="text-xl font-semibold text-gray-800 mt-4">
-                Project 3
-              </h2>
+              <h2 className="text-xl font-semibold text-gray-800 mt-4">Project 3</h2>
             </a>
           </Link>
           <Link href="/project4">
-            <a className="bg-white shadow-md rounded-lg p-6 hover:shadow-lg transition">
+            <a className="bg-white shadow-md rounded-3xl p-6 hover:shadow-2xl hover:scale-110 transition-transform duration-300">
               <img
                 src="/assets/techs/puzzle.jpg"
                 alt="Project 4"
                 className="w-full h-48 object-cover rounded-md"
               />
-              <h2 className="text-xl font-semibold text-gray-800 mt-4">
-                Project 4
-              </h2>
+              <h2 className="text-xl font-semibold text-gray-800 mt-4">Project 4</h2>
             </a>
           </Link>
         </div>

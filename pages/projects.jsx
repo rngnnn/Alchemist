@@ -9,9 +9,8 @@ export default function Projects() {
     <>
       <Navbar />
       <div className="py-20">
-        <p className="text-3xl text-white font-semibold text-center">My Projects</p>
+        <p className="text-3xl text-white font-semibold text-center"></p>
         <p className="text-xl text-white/50 font-normal text-center mb-5">
-          The projects that I am actively working on are in this field.
         </p>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 xl:grid-cols-3 w-full gap-4 items-center mt-2">
