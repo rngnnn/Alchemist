@@ -1,4 +1,4 @@
-import Navbar from '../components/Navbar';
+import Navbar from '../components/Header';
 import swr from '../lib/swr';
 
 export default function Projects() {
@@ -9,7 +9,7 @@ export default function Projects() {
     <>
       <Navbar />
       <div className="py-20">
-        <p className="text-3xl text-white font-semibold text-center"></p>
+        <p className="text-3xl text-white font-semibold text-center">My Projects</p>
         <p className="text-xl text-white/50 font-normal text-center mb-5">
         </p>
 
