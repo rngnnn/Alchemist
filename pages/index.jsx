@@ -27,37 +27,38 @@ export default function Home() {
 
   return (
     <>
-      {/* Siyah Yazı (Sağ Tarafta, Yukarıdan Aşağı) */}
       {/* Siyah Yazı (Sol Tarafta, Yukarıdan Aşağı Harf Harf) */}
-      <div className="absolute top-12 left-5 h-full flex flex-col justify-center items-center space-y-2 pl-4">
-        <p className="text-white text-lg">Y</p>
-        <p className="text-white text-lg">e</p>
-        <p className="text-white text-lg">t</p>
-        <p className="text-white text-lg"> </p>
-        <p className="text-white text-lg">a</p>
-        <p className="text-white text-lg">n</p>
-        <p className="text-white text-lg">o</p>
-        <p className="text-white text-lg">t</p>
-        <p className="text-white text-lg">h</p>
-        <p className="text-white text-lg">e</p>
-        <p className="text-white text-lg">r</p>
-        <p className="text-white text-lg"> </p>
-        <p className="text-white text-lg">l</p>
-        <p className="text-white text-lg">i</p>
-        <p className="text-white text-lg">n</p>
-        <p className="text-white text-lg">e</p>
-        <p className="text-white text-lg"> </p>
-        <p className="text-white text-lg">o</p>
-        <p className="text-white text-lg">f</p>
-        <p className="text-white text-lg"> </p>
-        <p className="text-white text-lg">t</p>
-        <p className="text-white text-lg">e</p>
-        <p className="text-white text-lg">x</p>
-        <p className="text-white text-lg">t</p>
-        <p className="text-white text-lg">.</p>
+      <div className="font absolute top-19 left-10 h-full flex flex-col justify-center items-center space-y-1 pl-9">
+        <p className="text-white text-3xl">Y</p>
+        <p className="text-white text-4xl">e</p>
+        <p className="text-white text-4xl">t</p>
+        <p className="text-white text-4xl"> </p><hr /><hr />
+        <p className="text-white text-4xl">a</p>
+        <p className="text-white text-4xl">n</p>
+        <p className="text-white text-4xl">o</p>
+        <p className="text-white text-4xl">t</p>
+        <p className="text-white text-4xl">h</p>
+        <p className="text-white text-4xl">e</p>
+        <p className="text-white text-4xl">r</p>
+        <p className="text-white text-4xl"> </p><hr /><hr />
+        <p className="text-white text-4xl">l</p>
+        <p className="text-white text-4xl">i</p>
+        <p className="text-white text-4xl">n</p>
+        <p className="text-white text-4xl">e</p>
+        <p className="text-white text-4xl"> </p><hr /><hr />
+        <p className="text-white text-4xl">o</p>
+        <p className="text-white text-4xl">f</p>
+        <p className="text-white text-4xl"> </p>
+        <p className="text-white text-4xl">t</p>
+        <p className="text-white text-4xl">e</p>
+        <p className="text-white text-4xl">x</p>
+        <p className="text-white text-4xl">t</p>
+        <p className="text-white text-4xl">.</p>
       </div>
+
+      {/* Siyah Yazı (Sağ Tarafta, Yukarıdan Aşağı) */}
       <div className="absolute top-0 right-0 h-full flex flex-col justify-center items-center space-y-5 pr-4">
-        <p className="text-white text-lg rotate-90">Another line of text.</p>
+        <p className="text-white text-4xl rotate-90">FUTURE</p>
       </div>
 
       {showText && (
