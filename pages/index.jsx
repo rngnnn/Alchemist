@@ -73,27 +73,31 @@ export default function Home() {
       )}
 
       {/* Kırmızı Alan */}
-      <div className="bg-red-900 min-h-screen flex items-center justify-center">
-        <div className="text-center">
-          {/* Manifesto Başlığı */}
-          <p className="text-white text-4xl font-semibold -mt-10">MANIFESTO</p>
-          {/* Manifesto GIF */}
-          <div className="mt-4">
-            <img
-              src="/assets/techs/tears.gif"
-              alt="Manifesto GIF"
-              style={{
-                transform: `scale(${scale})`,
-                transition: 'transform 0.2s ease-in-out',
-              }}
-              className="w-full max-w-md rounded-lg shadow-lg mx-auto"
-            />
-          </div>
+      <div className="bg-red-900 min-h-screen flex items-center justify-center relative">
+        {/* Manifesto Başlığı */}
+        <p className="absolute top-10 text-blue-900 text-4xl font-semibold">
+          MANIFESTO
+        </p>
+        {/* Manifesto GIF */}
+        <div className="mt-4">
+          <img
+            src="/assets/techs/tears.gif"
+            alt="Manifesto GIF"
+            style={{
+              transform: `scale(${scale})`, // Scroll ile ölçeklendirme
+              transition: 'transform 0.1s ease-out-in', // Yumuşak geçiş
+             
+              borderRadius: '100px',
+              display: 'block',
+              objectFit: 'cover',
+            }}
+            className="shadow-lg"
+          />
         </div>
       </div>
 
       {/* Projects Bölümü */}
-      <div className="bg-gray-100 min-h-screen flex flex-col items-center justify-center">
+      <div id="projects" className="bg-gray-100 min-h-screen flex flex-col items-center justify-center">
         <h1 className="text-4xl font-bold text-gray-800 mb-6">Projects</h1>
         <div className="mt-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6">
           {/* Proje Kartları */}
