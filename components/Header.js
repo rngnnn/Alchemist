@@ -78,7 +78,7 @@ export default function Navbar() {
 
       {/* Mobile Menu */}
       {menuOpen && (
-        <div className="md:hidden px-6 pb-4 pt-2 bg-white dark:bg-black border-t border-gray-200 dark:border-gray-700">
+        <div className="md:hidden px-6 pb-4 pt-2 bg-black/70 backdrop-blur-sm border-t border-gray-200 dark:border-gray-700 transition-all duration-300">
           <ul className="space-y-3 text-gray-800 dark:text-gray-200">
             {navItems.map((item) => (
               <li key={item.label}>

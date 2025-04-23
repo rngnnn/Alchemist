@@ -1,4 +1,3 @@
-// pages/api/contact.js
 import nodemailer from 'nodemailer';
 
 export default async function handler(req, res) {
@@ -6,31 +5,29 @@ export default async function handler(req, res) {
 
   const { name, email, message } = req.body;
 
-  if (!name || !email || !message) {
-    return res.status(400).json({ error: 'Missing fields' });
-  }
-
   const transporter = nodemailer.createTransport({
     service: 'gmail',
     auth: {
-      user: process.env.MAIL_USER=MAIL_USER=rngnnnclk@gmail.com
-      ,     // örnek: rngnnnclk@gmail.com
-      pass: process.env.MAIL_PASS=Alex13579+,     // uygulama şifresi (gmail app password)
+      user: process.env.MAIL_USER,
+      pass: process.env.MAIL_PASS,
     },
   });
 
   try {
     await transporter.sendMail({
       from: `"${name}" <${email}>`,
-      to: process.env.MAIL_USER,  // kendine gönderiyorsun
-      subject: 'Yeni İletişim Formu Mesajı',
-      text: message,
-      html: `<p><strong>Gönderen:</strong> ${name} (${email})</p><p>${message}</p>`,
+      to: process.env.MAIL_USER,
+      subject: 'Yeni İletişim Mesajı',
+      html: `
+        <p><strong>Ad:</strong> ${name}</p>
+        <p><strong>Email:</strong> ${email}</p>
+        <p><strong>Mesaj:</strong><br/>${message}</p>
+      `,
     });
 
-    return res.status(200).json({ message: 'Email sent successfully!' });
-  } catch (error) {
-    console.error('Email Error:', error);
-    return res.status(500).json({ error: 'Email failed to send.' });
+    res.status(200).json({ message: 'Email sent successfully!' });
+  } catch (err) {
+    console.error('Email send error:', err);
+    res.status(500).json({ error: 'Failed to send email' });
   }
 }

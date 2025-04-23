@@ -1,5 +1,7 @@
 import '../styles/globals.css'
 import '../styles/tooltip.css'
+import { Toaster } from 'react-hot-toast';
+
 import Head from 'next/head';
 import dynamic from 'next/dynamic';
 import 'tippy.js/animations/scale-subtle.css';
@@ -62,6 +64,8 @@ function MyApp({ Component, pageProps }) {
             </div>
         </div>
     </Transition>
+    <Toaster position="bottom-center" />
+
     <main className="border-b-[7px] border-t-[7px] h-full border-neutral-800/50 w-full">
       <div className="min-h-screen max-w-screen-lg p-5 w-full md:w-10/12 lg:w-8/12 mx-auto transition-all duration-300">
         <Header />

@@ -1,4 +1,6 @@
 import { useState } from 'react';
+import { toast } from 'react-hot-toast';
+
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -12,12 +14,43 @@ export default function Contact() {
     setFormData({ ...formData, [name]: value });
   };
 
-  const handleSubmit = (e) => {
+
+  // const handleSubmit = (e) => {
+  //   e.preventDefault();
+  //   console.log('Form submitted:', formData);
+  //   alert('Thank you for your message!');
+  //   setFormData({ name: '', email: '', message: '' });
+  // };
+
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log('Form submitted:', formData);
-    alert('Thank you for your message!');
-    setFormData({ name: '', email: '', message: '' });
+  
+    const loadingToast = toast.loading('Sending message...');
+  
+    try {
+      const res = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(formData),
+      });
+  
+      const result = await res.json();
+  
+      toast.dismiss(loadingToast);
+  
+      if (res.ok) {
+        toast.success('Message sent successfully!');
+        setFormData({ name: '', email: '', message: '' });
+      } else {
+        toast.error('Sending failed: ' + result.error);
+      }
+    } catch (error) {
+      toast.dismiss(loadingToast);
+      console.error('Hata:', error);
+      toast.error('Something went wrong.Please try again later.');
+    }
   };
+  
 
   return (
     <section className="py-24 bg-red-900">
@@ -67,7 +100,7 @@ export default function Contact() {
                   name="name"
                   value={formData.name}
                   onChange={handleChange}
-                  className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-indigo-300"
+                  className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-indigo-300 text-black"
                   required
                 />
               </div>
@@ -84,7 +117,7 @@ export default function Contact() {
                   name="email"
                   value={formData.email}
                   onChange={handleChange}
-                  className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring focus:ring-indigo-300"
+                  className="w-full px-4 py-2 text-black border rounded-lg focus:outline-none focus:ring focus:ring-indigo-300"
                   required
                 />
               </div>
@@ -100,14 +133,14 @@ export default function Contact() {
                   name="message"
                   value={formData.message}
                   onChange={handleChange}
-                  className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring focus:ring-indigo-300"
+                  className="w-full text-black px-4 py-2 border rounded-lg focus:outline-none focus:ring focus:ring-indigo-300"
                   rows="4"
                   required
                 ></textarea>
               </div>
               <button
                 type="submit"
-                className="w-full bg-black-600 text-white font-bold py-2 px-4 rounded-lg hover:bg-red-700 transition duration-200"
+                className="w-full bg-black text-white font-bold py-2 px-4 rounded-lg hover:bg-red-700 transition duration-200"
               >
                 Send
               </button>
