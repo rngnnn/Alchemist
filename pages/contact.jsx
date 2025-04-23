@@ -21,44 +21,43 @@ export default function Contact() {
 
   return (
     <section className="py-24 bg-red-900">
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      {/* <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8"> */}
         <div className="grid lg:grid-cols-2 grid-cols-1 gap-10">
           {/* Görsel ve İletişim Bilgileri */}
-          <div className="relative">
-            <img
-              src="assets/techs/rngn.png"
-              alt="Contact Us Illustration"
-              className="w-full lg:h-auto h-[500px] lg:rounded-l-xl rounded-2xl object-contain"
-            />
-           
-            <div className="absolute bottom-0 w-full p-6 bg-red-900 rounded-lg">
-              <div className="mb-4">
-                <h5 className="text-black text-lg font-semibold">Phone</h5>
-                <p className="text-gray-50">+31685166208</p>
-              </div>
-              <div className="mb-4">
-                <h5 className="text-black text-lg font-semibold">Email</h5>
-                <p className="text-gray-50">rngnnnclk@gmail.com</p>
-              </div>
-              <div>
-                <h5 className="text-black text-lg font-semibold">Address</h5>
-                <p className="text-gray-50">
-                  Amsterdam
-                </p>
-              </div>
-            </div>
-          </div>
+          <div className="relative w-full flex justify-center items-center flex-col">
+  <img
+    src="/assets/techs/rngn.png"
+    alt="Contact Us Illustration"
+    className="w-full max-w-[400px] sm:max-w-[500px] md:max-w-[600px] h-auto object-contain rounded-xl"
+  />
+
+  <div className="mt-6 w-full p-6 bg-red-800 rounded-lg max-w-md text-center">
+    <div className="mb-4">
+      <h5 className="text-white text-lg font-semibold">Phone</h5>
+      <p className="text-gray-100">+31685166208</p>
+    </div>
+    <div className="mb-4">
+      <h5 className="text-white text-lg font-semibold">Email</h5>
+      <p className="text-gray-100">rngnnnclk@gmail.com</p>
+    </div>
+    <div>
+      <h5 className="text-white text-lg font-semibold">Address</h5>
+      <p className="text-gray-100">Amsterdam</p>
+    </div>
+  </div>
+</div>
+
 
           {/* Form Alanı */}
           <div className="bg-red p-8 rounded-2xl shadow-lg">
-            <h2 className="text-black text-3xl font-bold mb-6">
+            <h2 className="text-white text-3xl font-bold mb-6">
               Send Me A Message
             </h2>
             <form onSubmit={handleSubmit}>
               <div className="mb-4">
                 <label
                   htmlFor="name"
-                  className="block text-gray-700 font-bold mb-2"
+                  className="block text-white font-bold mb-2"
                 >
                   Name
                 </label>
@@ -68,14 +67,14 @@ export default function Contact() {
                   name="name"
                   value={formData.name}
                   onChange={handleChange}
-                  className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring focus:ring-indigo-300"
+                  className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-indigo-300"
                   required
                 />
               </div>
               <div className="mb-4">
                 <label
                   htmlFor="email"
-                  className="block text-gray-700 font-bold mb-2"
+                  className="block text-white font-bold mb-2"
                 >
                   Email
                 </label>
@@ -92,7 +91,7 @@ export default function Contact() {
               <div className="mb-4">
                 <label
                   htmlFor="message"
-                  className="block text-gray-700 font-bold mb-2"
+                  className="block text-white font-bold mb-2"
                 >
                   Message
                 </label>
@@ -115,7 +114,7 @@ export default function Contact() {
             </form>
           </div>
         </div>
-      </div>
+      {/* </div> */}
     </section>
   );
 }

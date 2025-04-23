@@ -10,7 +10,7 @@ const itemsRight = [
 
 const navItems = [
   { label: 'Home', href: '/' },
-  { label: 'Projects', href: '/projects' },
+  { label: 'Projects', href: '/#projects' },
   { label: 'Contact', href: '/contact' },
   { label: 'Blogs', href: 'https://blog.codeshare.me', external: true },
 ];
