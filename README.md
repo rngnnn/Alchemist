@@ -19,7 +19,7 @@ where minimalism meets meaning, and motion meets silence.
 
 | SS | SS1 | SS2 |
 |:--:|:---:|:---:|
-| ![SS](assets/screens/SS.png) | ![SS1](assets/screens/SS1.png) | ![SS2](assets/screens/SS2.png) |
+| ![](./public/assets/screens/SS.png) | ![](./public/assets/screens/SS1.png) | ![](./public/assets/screens/SS2.png) |
 
 
 ## 🌐 Live Demo
