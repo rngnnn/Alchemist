@@ -15,9 +15,16 @@ where minimalism meets meaning, and motion meets silence.
 
 ---
 
+## 📸 Screenshots
+
+| SS | SS1 | SS2 |
+|:--:|:---:|:---:|
+| ![SS](assets/screens/SS.png) | ![SS1](assets/screens/SS1.png) | ![SS2](assets/screens/SS2.png) |
+
+
 ## 🌐 Live Demo
 
-👉 [alchemist.vercel.app](https://your-deployed-link.vercel.app)
+👉 [alchemist.vercel.app](https://alchemist-kappa.vercel.app/)
 
 ---
 
@@ -45,7 +52,31 @@ where minimalism meets meaning, and motion meets silence.
 
 ## 📁 Project Structure
 
-Alchemist/ ├── public/ # Static files (images, GIFs, etc.) │ ├── assets/ # Design assets │ │ ├── techs/ # Technology-related visuals │ │ │ ├── eye.jpg │ │ │ ├── lolipop.jpg │ │ │ ├── tears.gif │ │ │ └── puzzle.jpg │ │ ├── project1.jpg │ │ ├── project2.jpg │ │ ├── project3.jpg │ │ └── project4.jpg ├── pages/ # Next.js pages │ ├── _app.jsx # Custom App component (global setup) │ ├── index.jsx # Main page │ ├── projects.jsx # Projects overview page │ ├── contact.jsx # Contact page │ ├── project1.jsx # Project 1 details │ ├── project2.jsx # Project 2 details │ ├── project3.jsx # Project 3 details │ └── project4.jsx # Project 4 details ├── components/ # Reusable components │ ├── Header.js # Header with navigation and hamburger menu │ ├── Navbar.jsx # Navbar component ├── styles/ # CSS and styling files │ └── globals.css # Global styles ├── lib/ # Utility functions │ └── swr.js # SWR configuration for data fetching ├── README.md # Project documentation ├── package.json # Dependencies and project metadata └── next.config.js # Next.js configuration
+Alchemist/
+├── public/               # Static files
+│   └── assets/
+│       └── techs/        # Images & GIFs
+│           ├── eye.jpg
+│           ├── lolipop.jpg
+│           ├── tears.gif
+│           ├── puzzle.jpg
+├── pages/                # Next.js pages
+│   ├── index.jsx         # Home
+│   ├── projects.jsx      # Projects overview
+│   ├── contact.jsx       # Contact form
+│   ├── project1.jsx      # Project pages (1–4)
+│   └── ...
+├── components/           # Reusable UI
+│   ├── Header.js
+│   ├── Navbar.jsx
+├── styles/
+│   └── globals.css
+├── lib/
+│   └── swr.js            # Data fetching config
+├── README.md
+├── package.json
+└── next.config.js
+
 
 
 ---
