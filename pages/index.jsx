@@ -115,11 +115,13 @@ className="bg-red-900"
           ].map((project) => (
             <Link key={project.title} href={project.link}>
               <a className="bg-white shadow-md rounded-3xl p-6 hover:shadow-2xl hover:scale-105 transition-transform duration-300">
+<div className="overflow-hidden rounded-xl mb-4">
                 <img
                   src={`/assets/techs/${project.image}`}
                   alt={project.title}
-                  className="w-full h-48 object-cover rounded-md"
+                  className="w-full max-h-64 object-contain max-auto"
                 />
+</div>
                 <h3 className="text-xl font-semibold text-gray-800 mt-4">{project.title}</h3>
               </a>
             </Link>
