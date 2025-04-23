@@ -58,6 +58,13 @@ Crafted with obsession by
 
 ---
 
+
+## 🎥 Video Walkthrough
+
+[![Alchemist Demo](https://img.youtube.com/vi/tAmvPzBGq-E/0.jpg)](https://www.youtube.com/watch?v=tAmvPzBGq-E)
+
+------
+
 ## 🪶 License
 
 This project is open for inspiration.  
