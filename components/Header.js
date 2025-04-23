@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect,useRef } from 'react';
 import Link from 'next/link';
 
 const itemsRight = [
@@ -12,10 +12,13 @@ const navItems = [
   { label: 'Home', href: '/' },
   { label: 'Projects', href: '/#projects' },
   { label: 'Contact', href: '/contact' },
-  { label: 'Blogs', href: 'https://blog.codeshare.me', external: true },
+  { label: 'Blogs', href: 'https://zaumstudio.com/', external: true },
 ];
 
+
+
 export default function Navbar() {
+    const menuRef = useRef();
   const [isScrolled, setIsScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
 
@@ -26,6 +29,18 @@ export default function Navbar() {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
+
+ // dış tıklama kontrolü
+ useEffect(() => {
+    const handleOutsideClick = (e) => {
+      if (menuOpen && menuRef.current && !menuRef.current.contains(e.target)) {
+        setMenuOpen(false);
+      }
+    };
+    document.addEventListener('mousedown', handleOutsideClick);
+    return () => document.removeEventListener('mousedown', handleOutsideClick);
+  }, [menuOpen]);
+
 
   return (
     <header
@@ -78,7 +93,7 @@ export default function Navbar() {
 
       {/* Mobile Menu */}
       {menuOpen && (
-        <div className="md:hidden px-6 pb-4 pt-2 bg-black/70 backdrop-blur-sm border-t border-gray-200 dark:border-gray-700 transition-all duration-300">
+        <div className="md:hidden px-6 pb-4 pt-2 bg-black/35 backdrop-blur-sm border-t border-gray-200 dark:border-gray-700 "ref={menuRef}>
           <ul className="space-y-3 text-gray-800 dark:text-gray-200">
             {navItems.map((item) => (
               <li key={item.label}>

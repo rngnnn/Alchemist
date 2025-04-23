@@ -58,7 +58,7 @@ function MyApp({ Component, pageProps }) {
         <div style={{ zIndex: 99999 }} className="fixed bg-black/75 w-full h-screen flex justify-center items-center pointer-events-none">
             <div className="flex items-center gap-x-6 animate-pulse">
                 <div className="text-center">
-                    <p className="text-6xl mb-5 font-semibold">Rengin Forbes</p>
+                    <p className="text-6xl mb-5 font-semibold">RNGN</p>
                     <p className="uppercase text-xl font-semibold text-white"><i className="fal fa-spinner-third fa-spin" /></p>
                 </div>
             </div>
@@ -71,11 +71,13 @@ function MyApp({ Component, pageProps }) {
         <Header />
         <Component {...pageProps} />
       </div>
-      <div className="bg-neutral-800/5">
+      <div className="bg-neutral-00/5">
         <div className="max-w-screen-lg p-5 w-full md:w-10/12 lg:w-8/12 mx-auto transition-all duration-300">
           <div className="md:flex w-full items-center justify-between">
             <div>
-              <p>Rengin Forbes</p></div>
+              <p className="text-xs text-white/50" >Designed & built by Rengin Forbes © 2025
+
+              </p></div>
             <div className="mt-2 md:mt-0 flex items-center">
               <a href="" target="_blank" rel="noreferrer" className="w-full md:w-auto bg-neutral-700/5 hover:bg-neutral-700/20 px-4 py-2 rounded-md transition-all duration-200">
                 <i className="fab fa-discord mr-2" />Join My Discord

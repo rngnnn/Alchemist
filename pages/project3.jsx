@@ -1,6 +1,12 @@
+import Link from 'next/link';
+
+
 export default function Project3() {
     return (
-        <div className="min-h-screen flex flex-col items-center justify-center bg-black text-white p-8 transition-colors duration-500">
+        <div className="min-h-screen flex flex-col items-center justify-center bg-black/50 text-white p-8 transition-colors duration-500 rounded-3xl shadow-2xl backdrop-blur-md mx-4 md:mx-16 my-10">
+           
+           <div className="w-full max-w-4xl  backdrop-blur-md rounded-3xl shadow-2xl p-8 md:p-12 text-center space-y-6 z-10">
+
             <h1 className="text-4xl font-bold mb-6">
                 <span className="text-red-500">The Future</span>
             </h1>
@@ -40,6 +46,13 @@ export default function Project3() {
                     <span className="text-red-500">Julio Cortázar</span>
                 </p>
             </div>
+            </div>
+
+            <Link href="/#projects">
+        <a className="fixed bottom-4 left-4 text-xs text-white/40 hover:text-white transition z-20">
+          ← Back to Projects
+        </a>
+      </Link>
         </div>
     );
 }

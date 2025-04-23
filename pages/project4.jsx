@@ -2,15 +2,10 @@ import Link from 'next/link';
 
 export default function Project4() {
     return (
-        <div className="min-h-screen flex flex-col items-center justify-center bg-black text-white p-8 transition-colors duration-500">
+        <div className="min-h-screen relative flex flex-col items-center justify-center bg-black/50 text-white p-8 transition-colors duration-500 rounded-3xl shadow-2xl backdrop-blur-md mx-4 md:mx-16 my-10">
             {/* Navbar */}
-            <nav className="absolute top-4 left-4">
-                <Link href="/#projects">
-                    <a className="text-red-500 underline text-lg hover:text-red-300">
-                        Back to Projects
-                    </a>
-                </Link>
-            </nav>
+
+            <div className="w-full max-w-4xl  backdrop-blur-md rounded-3xl shadow-2xl p-8 md:p-12 text-center space-y-6 z-10">
 
             {/* Content */}
             <h1 className="text-4xl font-bold mb-6">
@@ -51,6 +46,17 @@ export default function Project4() {
                     <span className="text-red-500">Forough Farrokhzad</span>
                 </p>
             </div>
+            </div>
+     
+
+            <Link href="/#projects">
+    <a className="absolute bottom-4 left-4 text-xs text-white/40 hover:text-white transition">
+      ← Back to Projects
+    </a>
+  </Link>
         </div>
+        
+
+        
     );
 }
